@@ -1,0 +1,169 @@
+.dashboard {
+    background-color: var(--white-color);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 488px;
+    border-bottom: 1px solid #ebebeb;
+}
+/* header */
+header {
+    margin-top: 16px;
+    text-align: center;
+    line-height: 18px;
+    color: var(--text-color);
+}
+
+header h4 {
+    color: var(--primary-color);
+    font-weight: 700;
+}
+/* CD */
+.cd {
+    width: 200px;
+    margin: 0 auto;
+}
+
+/* Control */
+.control {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 2rem;
+    color: #7f7f7f;
+    margin: 20px 0;
+}
+
+.control .btn {
+    padding: 15px;
+}
+
+.control .btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.control .btn-random.active, 
+.control .btn-repeat.active {
+    color: var(--primary-color);
+}
+
+.control .btn-toggle-play {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 16px;
+    border-radius: 100%;
+    width: 52px;
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.player .btn-toggle-play i.fa-play {
+    display: block;
+}
+
+.player.playing .btn-toggle-play i.fa-play {
+    display: none;
+}
+
+.player .btn-toggle-play i.fa-pause {
+    display: none;
+}
+
+.player.playing .btn-toggle-play i.fa-pause {
+    display: block;
+}
+
+#progress {
+    width: 94%;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 0;
+}
+
+
+/* playlist */
+.playlist{
+    margin-top: 385px;
+    padding: 8px;
+    background-color: #f2f2f2;
+}
+
+.playlist .song{
+    display: flex;
+    background-color: var(--white-color);
+    border-radius: 3px;
+    padding: 12px 16px;
+    margin-bottom: 8px;
+}
+
+.playlist .song.active {
+    background-color: var(--primary-color);
+}
+
+.playlist .song__content{
+    display: flex;
+    Justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    padding-left: 16px;
+}
+
+.song .title {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.song.active .title,
+.song.active .author,
+.song.active .option {
+    color: var(--white-color);
+    opacity: 0.94;
+}
+
+.song .author {
+    color: #888;
+}
+
+.song .thumb {
+    width: 40px;
+    height: 40px;
+}
+.song .option {
+    font-size: 2rem;
+    color: #888;
+    padding: 0 0 0 25px;
+    margin: auto 0;
+}
+
+.song:active {
+    opacity: 0.8;
+}
+
+input[type="range"] {
+    -webkit-appearance: none; /* Loại bỏ kiểu mặc định */
+    appearance: none;
+    width: 100%; /* Chiều rộng của thanh trượt */
+    height: 10px; /* Chiều cao của thanh trượt */
+    background: #ddd; /* Màu sắc của thanh trượt */
+    border-radius: 5px; /* Bo góc thanh trượt */
+    outline: none; /* Loại bỏ viền khi nhấp vào */
+    opacity: 0.7; /* Độ trong suốt */
+    transition: opacity 0.2s; /* Hiệu ứng chuyển đổi */
+  }
+  
+  input[type="range"]:hover {
+    opacity: 1; /* Đổi opacity khi hover */
+  }
+
+/* Đối với WebKit browsers (Chrome, Safari, Edge) */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px; /* Độ rộng của nút kéo */
+    height: 20px; /* Chiều cao của nút kéo */
+    background: var(--primary-color); /* Màu sắc của nút kéo */
+    border-radius: 30%; /* Làm tròn nút kéo */
+    cursor: pointer; /* Đổi con trỏ khi di chuột lên nút kéo */
+  }
